@@ -28,7 +28,8 @@ import {
 const content = {
   hero: {
     title: "CODING SINCE 2013",
-    description: "",
+    description:
+      "it looks like something is missing in this part of the website, maybe a short summary?",
   },
   about: {
     overTitle: "Introduction",

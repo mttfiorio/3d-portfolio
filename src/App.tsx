@@ -16,8 +16,10 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <Navbar />
+      <div className="relative z-0 bg-primary py-12 px-4 lg:px-12">
+        {
+          //<Navbar />
+        }
         <Hero />
 
         <About />
