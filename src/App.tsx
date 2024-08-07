@@ -16,21 +16,20 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary py-12 px-4 lg:px-12">
-        {
-          //<Navbar />
-        }
-        <Hero />
-
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className="relative z-0">
-          {
-            //<Contact />
-            // <StarsCanvas />
-          }
+      <div className="flex flex-col items-center relative z-0 bg-primary p-4 lg:p-12">
+        <Navbar />
+        <div className="max-w-[1220px]">
+          <Hero />
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <div className="relative z-0">
+            {
+              //<Contact />
+              // <StarsCanvas />
+            }
+          </div>
         </div>
       </div>
     </BrowserRouter>

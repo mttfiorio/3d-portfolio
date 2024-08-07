@@ -4,8 +4,12 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        exo2: "Exo \\2",
+      },
       colors: {
         primary: "#EBE322",
+        "primary-100": "#858013",
         secondary: "#aaa6c3",
         tertiary: "#151030",
         dark: "#2D2D2D",

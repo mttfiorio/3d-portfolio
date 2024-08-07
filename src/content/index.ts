@@ -26,8 +26,25 @@ import {
 } from "../assets";
 
 const content = {
+  navbar: {
+    name: "Matt",
+    navLinks: [
+      {
+        id: "about",
+        title: "About",
+      },
+      {
+        id: "work",
+        title: "Work",
+      },
+      {
+        id: "contact",
+        title: "Contact",
+      },
+    ],
+  },
   hero: {
-    title: "CODING SINCE 2013",
+    title: "SINCE 2013",
     description:
       "it looks like something is missing in this part of the website, maybe a short summary?",
   },

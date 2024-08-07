@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Exo 2", sans-serif;
+}
+
 h1 {
   font-family: "Exo 2", sans-serif;
   @apply text-[128px] font-extrabold leading-[80%] m-0;
