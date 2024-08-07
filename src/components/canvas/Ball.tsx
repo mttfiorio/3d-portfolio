@@ -43,7 +43,7 @@ type BallCanvasProps = {
 const BallCanvas = ({ icon }: BallCanvasProps) => {
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >

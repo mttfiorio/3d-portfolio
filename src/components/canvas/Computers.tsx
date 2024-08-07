@@ -1,11 +1,18 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+type ComputersProps = {
+  isMobile: boolean;
+};
+
+const Computers = ({ isMobile }: ComputersProps) => {
   const computer = useGLTF("./retro_computer/scene.gltf");
+  useFrame((state) => {
+    state.scene.rotateY(0.005);
+  });
 
   return (
     <mesh>
@@ -39,7 +46,7 @@ const ComputersCanvas = () => {
     setIsMobile(mediaQuery.matches);
 
     // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
+    const handleMediaQueryChange = (event: any) => {
       setIsMobile(event.matches);
     };
 
@@ -55,7 +62,7 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       className=""
-      frameloop="demand"
+      frameloop="always"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}

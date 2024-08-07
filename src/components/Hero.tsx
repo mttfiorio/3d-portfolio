@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
 
         <div className=" w-full z-10">
-          <AnimatedText text={content.hero.title} />
+          <h1>{content.hero.title}</h1>
           <p className={` mt-2 text-dark/90`}>{content.hero.description}</p>
         </div>
       </div>
