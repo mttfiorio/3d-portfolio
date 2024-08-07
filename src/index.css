@@ -1,16 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-  color-scheme: dark;
+h1 {
+  font-family: "Exo 2", sans-serif;
+  @apply text-[128px] font-extrabold leading-[80%] m-0;
+}
+h2 {
+  font-family: "Exo 2", sans-serif;
+  @apply text-[64px] font-bold  leading-[80%] m-0;
+}
+h3 {
+  font-family: "Exo 2", sans-serif;
+  @apply text-[24px] font-semibold leading-[200%] m-0;
+}
+h4 {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[24px] font-semibold leading-[120%] tracking-widest m-0;
+}
+p {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[20px] font-light  leading-[175%] m-0;
 }
 
 .hash-span {
