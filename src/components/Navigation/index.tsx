@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import { menu, close } from "../../assets";
@@ -7,7 +7,6 @@ import Menu from "./Menu";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,28 +24,58 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle smooth scrolling with custom duration
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementRect = element.getBoundingClientRect();
+      const targetPosition = elementRect.top + window.scrollY;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 2000;
+      let startTime: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = easeInOutQuad(
+          timeElapsed,
+          startPosition,
+          distance,
+          duration,
+        );
+
+        window.scrollTo(0, run);
+
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      requestAnimationFrame(animation);
+    }
+  };
+
+  const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
   return (
     <nav
-      className={`w-full flex items-center top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+      className={`fixed p-4 lg:p-12 w-full h-12 flex justify-between items-center top-0 z-20 
+        bg-gradient-to-b from-black/50 to-transparent
+        text-tillium font-bold`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+      {content.navbar.navLinks.map((nav) => (
+        <h5
+          key={nav.id}
+          className={"text-white cursor-pointer over-text"}
+          onClick={() => scrollToSection(nav.id)}
         >
-          <p className="text-black text-[18px] font-bold cursor-pointer flex ">
-            {content.navbar.name}
-          </p>
-        </Link>
-      </div>
-
-      <Menu setActive={setActive} />
+          <a>{nav.title}</a>
+        </h5>
+      ))}
     </nav>
   );
 };

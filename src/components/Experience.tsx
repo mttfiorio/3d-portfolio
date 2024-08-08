@@ -75,7 +75,7 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant(0)}>
-        <p>{content.experience.overTitle}</p>
+        <p className="over-text">{content.experience.overTitle}</p>
         <h2>{content.experience.title}</h2>
       </motion.div>
 

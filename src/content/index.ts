@@ -19,27 +19,23 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
 
 const content = {
   navbar: {
-    name: "Matt",
     navLinks: [
       {
         id: "about",
-        title: "About",
+        title: "ABOUT",
       },
       {
         id: "work",
-        title: "Work",
+        title: "WORK",
       },
       {
-        id: "contact",
-        title: "Contact",
+        id: "projects",
+        title: "PROJECTS",
       },
     ],
   },
@@ -49,8 +45,8 @@ const content = {
       "it looks like something is missing in this part of the website, maybe a short summary?",
   },
   about: {
-    overTitle: "Introduction",
-    title: "Overview",
+    overTitle: "INTRODUCTION",
+    title: "BIG ASS TITLE.",
     paragraph:
       "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",
     services: [
@@ -73,8 +69,8 @@ const content = {
     ],
   },
   experience: {
-    overTitle: " What I have done so far",
-    title: "Work Experience.",
+    overTitle: "WHAT?",
+    title: "ANOTHER BIG ASS TITLE.",
     experiences: [
       {
         title: "React.js Developer",
@@ -187,8 +183,8 @@ const content = {
     ],
   },
   works: {
-    overTitle: "My work",
-    title: "Projects.",
+    overTitle: "MY WORK",
+    title: "PROJECTS.",
     paragraph:
       "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
     projects: [
@@ -210,7 +206,7 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: carrent,
+        image: "mattiaWink.png",
         source_code_link: "https://github.com/",
       },
       {
@@ -231,7 +227,7 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: jobit,
+        image: "mattiaWink.png",
         source_code_link: "https://github.com/",
       },
       {
@@ -252,7 +248,7 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: tripguide,
+        image: "mattiaWink.png",
         source_code_link: "https://github.com/",
       },
     ],

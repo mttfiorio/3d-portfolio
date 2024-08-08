@@ -9,9 +9,9 @@ import {
   Hero,
   Navbar,
   Tech,
-  Works,
   StarsCanvas,
 } from "./components/index";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
           <About />
           <Experience />
           <Tech />
-          <Works />
+          <Projects />
           <div className="relative z-0">
             {
               //<Contact />

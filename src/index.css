@@ -5,13 +5,20 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+:root {
+  --color-primary: #ebe322;
+  --color-secondary: #b421eb;
+  --color-tertiary: #3021eb;
   font-family: "Exo 2", sans-serif;
+}
+
+.text-tillium {
+  font-family: "Titillium Web", sans-serif;
 }
 
 h1 {
   font-family: "Exo 2", sans-serif;
-  @apply text-[128px] font-extrabold leading-[80%] m-0;
+  @apply text-[96px] font-extrabold leading-[80%] m-0;
 }
 h2 {
   font-family: "Exo 2", sans-serif;
@@ -25,15 +32,42 @@ h4 {
   font-family: "Titillium Web", sans-serif;
   @apply text-[24px] font-semibold leading-[120%] tracking-widest m-0;
 }
+
 p {
   font-family: "Titillium Web", sans-serif;
   @apply text-[20px] font-light  leading-[175%] m-0;
+}
+
+.over-text {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[16px] font-light leading-[120%] tracking-[8px] ml-1 mb-2;
+}
+
+.description-text {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[20px] font-light leading-[175%] mt-4 ml-1;
+}
+
+@layer utilities {
+  .diagonal-cut {
+    clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+  }
 }
 
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
   display: block;
+}
+
+.black-transparent-gradient {
+  background: var(--color-primary);
+  background: linear-gradient(90.13deg, black 1.9%, var(--color-primary) 97.5%);
+  background: -webkit-linear-gradient(
+    -90.13deg,
+    black 1.9%,
+    var(--color-primary) 97.5%
+  );
 }
 
 .black-gradient {
@@ -60,10 +94,18 @@ p {
   );
 }
 
-.green-pink-gradient {
+.secondary-tertiary-gradient {
   background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(
+    90.13deg,
+    var(--color-secondary) 1.9%,
+    var(--color-tertiary) 97.5%
+  );
+  background: -webkit-linear-gradient(
+    -90.13deg,
+    var(--color-secondary) 1.9%,
+    var(--color-tertiary) 97.5%
+  );
 }
 
 .orange-text-gradient {
