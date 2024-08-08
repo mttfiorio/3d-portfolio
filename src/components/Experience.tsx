@@ -74,7 +74,7 @@ const ExperienceCard = ({
 
 const Experience = () => {
   return (
-    <>
+    <div className="mx-4 lg:mx-12">
       <motion.div variants={textVariant(0)}>
         <p className="over-text">{content.experience.overTitle}</p>
         <h2>{content.experience.title}</h2>
@@ -98,7 +98,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

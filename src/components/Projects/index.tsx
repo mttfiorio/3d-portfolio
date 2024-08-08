@@ -11,7 +11,7 @@ const LazyProjectCard = lazy(
 
 const Projects = () => {
   return (
-    <>
+    <div className="mx-4 lg:mx-12">
       <motion.div variants={textVariant(0)}>
         <p className="over-text">{content.works.overTitle}</p>
         <h2>{content.works.title}</h2>
@@ -38,7 +38,7 @@ const Projects = () => {
           </Suspense>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

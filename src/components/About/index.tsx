@@ -8,7 +8,7 @@ import ServiceCard from "./ServiceCard";
 
 const About = () => {
   return (
-    <>
+    <div className="mx-4 lg:mx-12">
       <motion.div variants={textVariant(0)}>
         <p className="over-text">{content.about.overTitle}</p>
         <h2>{content.about.title}</h2>
@@ -23,7 +23,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

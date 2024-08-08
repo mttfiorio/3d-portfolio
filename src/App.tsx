@@ -15,19 +15,18 @@ import Projects from "./components/Projects";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative flex flex-col items-center relative z-0 bg-primary p-4 lg:p-12">
+      <div className="relative flex flex-col items-center bg-primary">
         <Navbar />
-        <div className="max-w-[1220px]">
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <div className="relative z-0">
-            {
-              //<Contact />
-              // <StarsCanvas />
-            }
-          </div>
+
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <div className="relative z-0">
+          {
+            //<Contact />
+            // <StarsCanvas />
+          }
         </div>
       </div>
     </BrowserRouter>

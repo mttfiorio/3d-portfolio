@@ -58,6 +58,20 @@ p {
   .diagonal-cut-mirrored {
     clip-path: polygon(80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%, 0 0);
   }
+
+  .dark-gradient {
+    background: var(--color-dark);
+    background: linear-gradient(
+      -90deg,
+      var(--color-dark) 0%,
+      rgba(60, 51, 80, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      -90deg,
+      var(--color-dark) 0%,
+      rgba(60, 51, 80, 0) 100%
+    );
+  }
 }
 
 .hash-span {
@@ -88,16 +102,6 @@ p {
     #434343,
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
 }
 
 .secondary-tertiary-gradient {
