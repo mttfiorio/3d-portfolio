@@ -15,7 +15,7 @@ const MobileNav = ({ setActive }: MobileNavProps) => {
   };
 
   return (
-    <div className="sm:hidden flex flex-1 justify-end items-center">
+    <div className="flex flex-1 justify-end items-center">
       <div className="fixed right-4 top-4 z-50">
         <BurgerMenu toggleMenu={toggleMenu} isOpen={isOpen} />
       </div>
@@ -31,9 +31,8 @@ const MobileNav = ({ setActive }: MobileNavProps) => {
               stiffness: 80,
               damping: 20,
             }}
-            className={
-              "fixed right-0 top-0 w-[85px] h-screen z-40 overflow-auto bg-primary border border-black shadow-xl shadow-black"
-            }
+            className="fixed right-0 top-0 w-[85px] h-screen z-40 overflow-auto bg-primary 
+              border border-black shadow-xl shadow-black"
           >
             <div
               className="text-white mt-48 p-4 transform rotate-90

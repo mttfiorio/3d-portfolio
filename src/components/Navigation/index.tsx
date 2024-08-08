@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 import { menu, close } from "../../assets";
 import content from "../../content";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNavFull";
+import Menu from "./Menu";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -47,7 +46,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <MobileNav setActive={setActive} />
+      <Menu setActive={setActive} />
     </nav>
   );
 };
