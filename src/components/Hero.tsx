@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 
 import { ComputersCanvas } from "./canvas";
 import content from "../content";
-import AnimatedText from "./AnimatedHeader";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full h-screen mx-auto mb-12 lg:mb-36`}>
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto  flex flex-row items-start gap-5`}
       >

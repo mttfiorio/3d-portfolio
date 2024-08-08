@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import content from "../content";
+import { BallCanvas } from "./canvas";
 
 type ExperienceCardProps = {
   title: string;
@@ -79,12 +80,23 @@ const Experience = () => {
         <h2>{content.experience.title}</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-6 lg:mt-12 flex flex-col">
         <VerticalTimeline>
           {content.experience.experiences.map((experience, index) => (
             <ExperienceCard key={`experience-${index}`} {...experience} />
           ))}
         </VerticalTimeline>
+      </div>
+
+      <div
+        className="mt-6 lg:mt-12 
+      flex flex-row flex-wrap justify-center gap-10"
+      >
+        {content.tech.technologies.map((technology) => (
+          <div className="w-28 h-28" key={technology.name}>
+            <BallCanvas icon={technology.icon} />
+          </div>
+        ))}
       </div>
     </>
   );

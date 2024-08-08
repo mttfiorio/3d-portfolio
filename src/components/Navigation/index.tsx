@@ -31,7 +31,7 @@ const Navbar = () => {
       const elementRect = element.getBoundingClientRect();
       const targetPosition = elementRect.top + window.scrollY;
       const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
+      const distance = targetPosition - startPosition - 150;
       const duration = 2000;
       let startTime: number | null = null;
 

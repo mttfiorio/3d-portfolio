@@ -18,12 +18,9 @@ const StarWrapper = (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={` max-w-7xl mx-auto relative z-0`}
+        className={` max-w-7xl mx-auto relative z-0 mb-12 lg:mb-48`}
+        id={idName}
       >
-        <span className="hash-span" id={idName}>
-          &nbsp;
-        </span>
-
         <Component />
       </motion.section>
     );

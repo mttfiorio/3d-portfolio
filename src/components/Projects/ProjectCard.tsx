@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState, ReactNode } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
@@ -15,8 +15,50 @@ interface ProjectCardProps {
   description: string;
   tags: Tag[];
   image: string;
+  video: string;
   source_code_link: string;
 }
+
+interface VideoWrapper {
+  videoSrc: string;
+  children: ReactNode;
+}
+
+const VideoWrapper = ({ videoSrc, children }: VideoWrapper) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const handleIntersection = ([entry]: IntersectionObserverEntry[]) => {
+      if (entry.isIntersecting) {
+        videoRef.current?.play();
+      } else {
+        videoRef.current?.pause();
+      }
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.8,
+    });
+    videoRef.current && observer.observe(videoRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden">
+      <video
+        ref={videoRef}
+        muted
+        loop
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 bg-black/80">{children}</div>
+    </div>
+  );
+};
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
@@ -25,8 +67,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   tags,
   image,
   source_code_link,
+  video,
 }) => {
-  console.log(image);
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -34,45 +76,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         tiltMaxAngleY={-20}
         scale={1}
         transitionSpeed={450}
-        className="bg-primary-400 p-5 rounded-2xl sm:w-[360px] w-full"
+        className="sm:w-[360px] w-full diagonal-cut-mirrored"
       >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl lazy-load"
-            loading="lazy"
-          />
-
-          <div
-            onClick={() => window.open(source_code_link, "_blank")}
-            className="absolute inset-0 flex justify-end m-3 card-img_hover"
-          >
-            <div className="w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+        <VideoWrapper videoSrc={video}>
+          <div className="p-6 flex flex-col gap-4">
+            <h3 className="text-white">{name}</h3>
+            <p className="text-white">{description}</p>
+            <div className="mt-4 flex flex-wrap justify-end gap-2">
+              {tags.map((tag) => (
+                <p key={`${name}-${tag.name}`} className={`${tag.color}`}>
+                  #{tag.name}
+                </p>
+              ))}
             </div>
           </div>
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
+        </VideoWrapper>
       </Tilt>
     </motion.div>
   );

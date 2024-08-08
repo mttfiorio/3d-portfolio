@@ -26,7 +26,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-6 lg:mt-12 flex flex-wrap gap-7">
         {content.works.projects.map((project, index) => (
           <Suspense
             key={`project-${index}`}
