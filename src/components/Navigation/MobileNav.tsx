@@ -41,7 +41,6 @@ const MobileNav = ({ setActive }: MobileNavProps) => {
               {content.navbar.navLinks.map((nav) => (
                 <h3
                   key={nav.id}
-                  className={"text-black"}
                   onClick={() => {
                     setActive(nav.title);
                   }}

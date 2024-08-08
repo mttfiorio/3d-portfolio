@@ -32,7 +32,7 @@ const Menu = ({ setActive }: MenuProps) => {
               damping: 15,
             }}
             className={
-              "fixed right-0 top-0 w-full h-screen z-40 overflow-auto bg-black"
+              "fixed right-0 top-0 w-full h-screen z-40 overflow-auto bg-dark"
             }
           >
             <ul

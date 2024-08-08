@@ -9,7 +9,9 @@
   --color-primary: #ebe322;
   --color-secondary: #b421eb;
   --color-tertiary: #3021eb;
+  --color-dark: #0f2309;
   font-family: "Exo 2", sans-serif;
+  color: var(--color-dark);
 }
 
 .text-tillium {

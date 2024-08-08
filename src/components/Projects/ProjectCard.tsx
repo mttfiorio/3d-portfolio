@@ -55,7 +55,7 @@ const VideoWrapper = ({ videoSrc, children }: VideoWrapper) => {
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10 bg-black/80">{children}</div>
+      <div className="relative z-10 bg-dark/80">{children}</div>
     </div>
   );
 };
