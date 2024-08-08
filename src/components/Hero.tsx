@@ -8,8 +8,7 @@ const Hero = () => {
   return (
     <section
       className="relative w-full h-screen mx-auto 
-    mb-12 lg:mb-48 max-w-[1220px]
-    bg-black"
+    mb-12 lg:mb-48 max-w-[1220px]"
     >
       <div
         className={`absolute inset-0 max-w-7xl flex flex-row items-start gap-5
