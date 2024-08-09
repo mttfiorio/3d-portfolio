@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import content from "../../content";
-import BurgerMenu from "./BurgerMenu";
+import BurgerMenu from "./unused/BurgerMenu";
 import { AnimatePresence, motion } from "framer-motion";
 
 type MenuProps = {

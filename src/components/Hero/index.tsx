@@ -11,7 +11,7 @@ const ScrollAnimation = () => {
         opacity: 1,
         transition: {
           duration: 1,
-          delay: 1,
+          delay: 2,
         },
       }}
     >
@@ -61,17 +61,17 @@ const Hero = () => {
   }, [opacity]);
 
   return (
-    <motion.section
+    <section
       className="relative w-screen h-[400vh] mx-auto mb-12 lg:mb-48 bg-black"
       id="hero-section"
       style={{ opacity }}
     >
       <div className="sticky top-0 w-screen h-screen">
         <Sphere />
-      </div>
 
-      <ScrollAnimation />
-    </motion.section>
+        <ScrollAnimation />
+      </div>
+    </section>
   );
 };
 

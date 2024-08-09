@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import content from "../../content";
+import content from "../../../content";
 import BurgerMenu from "./BurgerMenu";
 import { AnimatePresence, motion } from "framer-motion";
 

@@ -1,22 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
-
-import { menu, close } from "../../assets";
+import React, { useEffect, useState } from "react";
+import { motion, useTransform } from "framer-motion";
 import content from "../../content";
-import Menu from "./Menu";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
-  const [scrolled, setScrolled] = useState(false);
+  const [scrollRatio, setScrollRatio] = useState(0);
+  const colorBreakpoint = 0.4;
 
   useEffect(() => {
+    const heroSectionElement = document.getElementById("hero-section");
+
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrollRatio(window.scrollY / (heroSectionElement?.offsetHeight || 1));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -61,22 +56,53 @@ const Navbar = () => {
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
+  const interpolateColor = (ratio: number) => {
+    if (ratio <= colorBreakpoint) return "#FFFFFF";
+    const hex = ((1 - ratio) / (1 - colorBreakpoint)) * 255;
+    const hexStr = Math.floor(hex).toString(16).padStart(2, "0");
+    return "#" + hexStr.repeat(3);
+  };
+
+  console.log(Math.round(scrollRatio * 10) * 10);
+
   return (
-    <nav
-      className={`fixed p-4 lg:p-12 w-full h-12 flex justify-between items-center top-0 z-20 
-        bg-gradient-to-b from-black/50 to-transparent
+    <motion.nav
+      className={`fixed p-4 lg:p-12 w-full h-12  top-0 z-20 
+        bg-gradient-to-b from-black/80 to-transparent
         text-tillium font-bold`}
+      initial={{ opacity: 0, y: "-100%" }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
     >
-      {content.navbar.navLinks.map((nav) => (
-        <h5
-          key={nav.id}
-          className={"text-white cursor-pointer over-text"}
-          onClick={() => scrollToSection(nav.id)}
-        >
-          <a>{nav.title}</a>
-        </h5>
-      ))}
-    </nav>
+      <div
+        className="flex justify-between items-center z-10"
+        style={{ color: interpolateColor(scrollRatio) }}
+      >
+        {content.navbar.navLinks.map((nav) => (
+          <h5
+            key={nav.id}
+            className={"cursor-pointer over-text"}
+            onClick={() => scrollToSection(nav.id)}
+          >
+            <a
+              className="p-1 pr-0"
+              style={{
+                backgroundColor: `rgba(255, 255, 255, ${
+                  scrollRatio > 0.4 ? (scrollRatio - colorBreakpoint) * 2.5 : 0
+                })`,
+              }}
+            >
+              {nav.title}
+            </a>
+          </h5>
+        ))}
+      </div>
+    </motion.nav>
   );
 };
 
