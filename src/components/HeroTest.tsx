@@ -9,7 +9,7 @@ const Ball = () => {
 
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
   const sphereRef = useRef<Mesh>(null);
-  const zoomSpeed = 1;
+  const zoomSpeed = 1.5;
   const maxZoom = 4.8;
   const endQuaternion = new Quaternion().setFromEuler(
     new Euler(3.141592653589793, -0.16, 3.141592653589793),
@@ -74,11 +74,9 @@ const Hero = () => {
         window.scrollY / (heroSectionElement?.offsetHeight || 1);
 
       let newOpacity = 1;
-      if (scrollRatio >= 0.55) {
-        newOpacity = 0.8 - scrollRatio;
+      if (scrollRatio >= 0.6) {
+        newOpacity = 1 - (scrollRatio - 0.6) * 5;
       }
-
-      console.log(scrollRatio, newOpacity);
 
       // Only update state if opacity has changed
       if (newOpacity !== opacity) {
