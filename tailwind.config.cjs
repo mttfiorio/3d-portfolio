@@ -16,6 +16,7 @@ module.exports = {
         secondary: "#B421EB",
         tertiary: "#3021EB",
         dark: "#0F2309",
+        light: "#EEEEEE",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

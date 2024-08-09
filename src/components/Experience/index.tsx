@@ -6,11 +6,10 @@ import {
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
-
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
-import content from "../content";
-import { BallCanvas } from "./canvas";
+import { textVariant } from "../../utils/motion";
+import BallCanvas from "./BallCanvas";
+import { SectionWrapper } from "../../hoc";
+import content from "../../content";
 
 type ExperienceCardProps = {
   title: string;

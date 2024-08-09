@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Euler, Mesh, Quaternion } from "three";
-import { motion } from "framer-motion";
 
-const Ball = () => {
+const Sphere = () => {
   // THis ended up being a lot of math and complexity :/
 
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
@@ -50,45 +49,12 @@ const Ball = () => {
   );
 };
 
-const Hero = () => {
-  const [opacity, setOpacity] = useState(1);
-  const dissolvenceScrollBreakpoint = 0.6;
-
-  useEffect(() => {
-    const heroSectionElement = document.getElementById("hero-section");
-
-    const handleScroll = () => {
-      const scrollRatio =
-        window.scrollY / (heroSectionElement?.offsetHeight || 1);
-
-      let newOpacity = 1;
-      if (scrollRatio >= dissolvenceScrollBreakpoint) {
-        newOpacity = 1 - (scrollRatio - dissolvenceScrollBreakpoint) * 5;
-      }
-
-      // Only update state if opacity has changed
-      if (newOpacity !== opacity) {
-        setOpacity(Math.max(newOpacity, 0));
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [opacity]);
-
+const SphereCanvas = () => {
   return (
-    <motion.section
-      className="relative w-screen h-[400vh] mx-auto mb-12 lg:mb-48 bg-black"
-      id="hero-section"
-      style={{ opacity }}
-    >
-      <div className="sticky top-0 w-screen h-screen">
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <Ball />
-        </Canvas>
-      </div>
-    </motion.section>
+    <Canvas camera={{ position: [0, 0, 5] }}>
+      <Sphere />
+    </Canvas>
   );
 };
 
-export default Hero;
+export default SphereCanvas;
