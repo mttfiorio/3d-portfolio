@@ -15,7 +15,7 @@ module.exports = {
         "primary-400": "#414034",
         secondary: "#B421EB",
         tertiary: "#3021EB",
-        dark: "#0F2309",
+        dark: "#1f1f1f",
         light: "#EEEEEE",
       },
       boxShadow: {

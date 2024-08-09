@@ -22,7 +22,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
       className="relative  p-8 rounded-lg min-h-[280px]" // Add background and padding
     >
       {/* Content wrapper with clip-path */}
-      <div className=" bg-gray-800 rounded-lg absolute inset-0 flex flex-col items-center justify-center space-y-4">
+      <div className=" bg-dark rounded-lg absolute inset-0 flex flex-col items-center justify-center space-y-4">
         <img
           src={icon}
           alt="web-development"
