@@ -7,8 +7,8 @@ const Sphere = () => {
 
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
   const sphereRef = useRef<Mesh>(null);
-  const zoomSpeed = 1.5;
-  const maxZoom = 4.8;
+  const zoomSpeed = 2.5;
+  const maxZoom = 8;
   const endQuaternion = new Quaternion().setFromEuler(new Euler(0, -0.8, 0));
 
   useFrame(({ camera }) => {

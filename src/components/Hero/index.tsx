@@ -15,7 +15,7 @@ const ScrollAnimation = () => {
         },
       }}
     >
-      <a href="#about">
+      <a href="#about" aria-label="about">
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-light flex justify-center items-start p-2">
           <motion.div
             animate={{
@@ -66,9 +66,9 @@ const Hero = () => {
       id="hero-section"
       style={{ opacity }}
     >
+      <h1 className="sticky text-white top-[50vh]">Hi</h1>
       <div className="sticky top-0 w-screen h-screen">
         <Sphere />
-
         <ScrollAnimation />
       </div>
     </section>

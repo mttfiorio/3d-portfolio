@@ -63,16 +63,13 @@ const Navbar = () => {
     return "#" + hexStr.repeat(3);
   };
 
-  console.log(Math.round(scrollRatio * 10) * 10);
-
   return (
     <motion.nav
-      className={`fixed p-4 lg:p-12 w-full h-12  top-0 z-20 
+      className={`fixed p-4 lg:p-12 w-full  h-12  top-0 z-20 
         bg-gradient-to-b from-black/80 to-transparent
         text-tillium font-bold`}
-      initial={{ opacity: 0, y: "-100%" }}
+      initial={{ y: "-100%" }}
       animate={{
-        opacity: 1,
         y: 0,
         transition: {
           duration: 1,
@@ -80,7 +77,7 @@ const Navbar = () => {
       }}
     >
       <div
-        className="flex justify-between items-center z-10"
+        className="flex justify-between items-center z-10 max-w-[1184px] mx-auto"
         style={{ color: interpolateColor(scrollRatio) }}
       >
         {content.navbar.navLinks.map((nav) => (

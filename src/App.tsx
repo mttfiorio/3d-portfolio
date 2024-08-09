@@ -8,16 +8,14 @@ import {
   Feedbacks,
   Hero,
   Navbar,
-  StarsCanvas,
 } from "./components/index";
 import Projects from "./components/Projects";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <div className="relative flex flex-col items-center bg-primary">
-        <Navbar />
-
         <Hero />
         <About />
         <Experience />
