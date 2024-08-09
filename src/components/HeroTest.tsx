@@ -67,6 +67,7 @@ const Ball = () => {
 const Hero = () => {
   const [opacity, setOpacity] = useState(1);
   const heroSectionElement = document.getElementById("hero-section");
+  const dissolvenceScrollBreakpoint = 0.6;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,8 +75,8 @@ const Hero = () => {
         window.scrollY / (heroSectionElement?.offsetHeight || 1);
 
       let newOpacity = 1;
-      if (scrollRatio >= 0.6) {
-        newOpacity = 1 - (scrollRatio - 0.6) * 5;
+      if (scrollRatio >= dissolvenceScrollBreakpoint) {
+        newOpacity = 1 - (scrollRatio - dissolvenceScrollBreakpoint) * 5;
       }
 
       // Only update state if opacity has changed
