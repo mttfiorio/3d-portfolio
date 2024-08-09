@@ -40,7 +40,8 @@ const content = {
     ],
   },
   hero: {
-    title: "SINCE 2013",
+    name: "MATTIA FIORIO",
+    title: ["DEVELOPER", "SINCE 2013"],
     description:
       "it looks like something is missing in this part of the website, maybe a short summary?",
   },

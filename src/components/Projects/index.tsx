@@ -11,7 +11,7 @@ const LazyProjectCard = lazy(
 
 const Projects = () => {
   return (
-    <div className="mx-4 lg:mx-12">
+    <div className="mx-4 md:mx-12">
       <motion.div variants={textVariant(0)}>
         <p className="over-text">{content.works.overTitle}</p>
         <h2>{content.works.title}</h2>
@@ -26,7 +26,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-6 lg:mt-12 flex flex-wrap gap-7">
+      <div className="mt-6 md:mt-12 flex flex-wrap gap-7">
         {content.works.projects.map((project, index) => (
           <Suspense
             key={`project-${index}`}

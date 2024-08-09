@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -20,7 +20,7 @@
 
 h1 {
   font-family: "Exo 2", sans-serif;
-  @apply text-[96px] font-extrabold leading-[80%] m-0;
+  @apply text-[64px] md:text-[96px] font-extrabold leading-[80%] m-0;
 }
 h2 {
   font-family: "Exo 2", sans-serif;
@@ -50,6 +50,11 @@ p {
   @apply text-[20px] font-light leading-[175%] mt-4 ml-1;
 }
 
+.menu-text {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[12px] md:text-[14px] font-bold tracking-[6px] md:tracking-[8px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)];
+}
+
 @layer utilities {
   .diagonal-cut {
     clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
@@ -59,17 +64,17 @@ p {
     clip-path: polygon(80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%, 0 0);
   }
 
-  .dark-gradient {
+  .black-gradient {
     background: var(--color-dark);
     background: linear-gradient(
       -90deg,
-      var(--color-dark) 0%,
-      rgba(60, 51, 80, 0) 100%
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
     );
     background: -webkit-linear-gradient(
       -90deg,
-      var(--color-dark) 0%,
-      rgba(60, 51, 80, 0) 100%
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
     );
   }
 }
@@ -88,20 +93,6 @@ p {
     black 1.9%,
     var(--color-primary) 97.5%
   );
-}
-
-.black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .secondary-tertiary-gradient {

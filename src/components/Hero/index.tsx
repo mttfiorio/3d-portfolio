@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Sphere from "./SphereCanvas";
+import content from "../../content";
 
 const ScrollAnimation = () => {
   return (
@@ -62,11 +63,25 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-screen h-[400vh] mx-auto mb-12 lg:mb-48 bg-black"
+      className="relative w-screen h-[400vh] mx-auto mb-12 md:mb-48 bg-black"
       id="hero-section"
       style={{ opacity }}
     >
-      <h1 className="sticky text-white top-[50vh]">Hi</h1>
+      <div
+        className="absolute text-white w-full h-screen flex flex-col justify-center items-center z-10
+      text-center"
+      >
+        <div className="over-text">{content.hero.name}</div>
+        <h1>
+          {content.hero.title.map((str) => (
+            <>
+              <br />
+              {str}
+            </>
+          ))}
+        </h1>
+      </div>
+
       <div className="sticky top-0 w-screen h-screen">
         <Sphere />
         <ScrollAnimation />

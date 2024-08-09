@@ -8,7 +8,7 @@ import ServiceCard from "./ServiceCard";
 
 const About = () => {
   return (
-    <div className="mx-4 lg:mx-12">
+    <div className="mx-4 md:mx-12">
       <motion.div variants={textVariant(0)}>
         <p className="over-text">{content.about.overTitle}</p>
         <h2>{content.about.title}</h2>
@@ -18,7 +18,7 @@ const About = () => {
         {content.about.paragraph}
       </motion.p>
 
-      <div className="mt-6 lg:mt-12 flex flex-wrap gap-10">
+      <div className="mt-6 md:mt-12 flex flex-wrap gap-10">
         {content.about.services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
