@@ -4,7 +4,7 @@ import {
   ComputersCanvas,
   StarsCanvas,
 } from "./canvas";
-import Hero from "./Hero";
+import Hero from "./HeroTest";
 import Navbar from "./Navigation";
 import About from "./About";
 import Experience from "./Experience";
