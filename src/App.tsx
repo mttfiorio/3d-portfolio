@@ -10,6 +10,7 @@ import {
   Navbar,
 } from "./components/index";
 import Projects from "./components/Projects";
+import Tech from "./components/About/Tech";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Hero />
         <About />
         <Experience />
+        <Tech />
         <Projects />
         <div className="relative z-0">
           {

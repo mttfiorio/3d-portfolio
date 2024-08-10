@@ -1,8 +1,7 @@
-import React, { useRef, useEffect, useState, ReactNode } from "react";
+import React, { useRef, useEffect, ReactNode } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
-import { github } from "../../assets";
 
 interface Tag {
   name: string;
@@ -45,7 +44,7 @@ const VideoWrapper = ({ videoSrc, children }: VideoWrapper) => {
   }, []);
 
   return (
-    <div className="relative rounded-2xl overflow-hidden">
+    <div className="relative rounded-2xl overflow-hidden diagonal-cut-mirrored">
       <video
         ref={videoRef}
         muted
@@ -76,8 +75,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         tiltMaxAngleY={-20}
         scale={1}
         transitionSpeed={450}
-        className="sm:w-[360px] w-full diagonal-cut-mirrored"
+        className="xs:w-[360px] w-full "
       >
+        <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10 diagonal-cut-mirrored" />
         <VideoWrapper videoSrc={video}>
           <div className="p-6 flex flex-col gap-4">
             <h3 className="text-white">{name}</h3>

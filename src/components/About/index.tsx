@@ -18,7 +18,11 @@ const About = () => {
         {content.about.paragraph}
       </motion.p>
 
-      <div className="mt-6 md:mt-12 flex flex-wrap gap-10">
+      <div
+        className="mt-6 md:mt-12 
+      flex items-start flex-wrap 
+      gap-12 xl:justify-between"
+      >
         {content.about.services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

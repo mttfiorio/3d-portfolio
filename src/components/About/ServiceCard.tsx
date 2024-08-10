@@ -10,19 +10,19 @@ type ServiceCardProps = {
 };
 
 const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
-  <Tilt
-    tiltMaxAngleX={-20}
-    tiltMaxAngleY={-20}
-    scale={1}
-    transitionSpeed={450}
-    className="xs:w-[250px] w-full overflow-hidden diagonal-cut" // Add overflow-hidden
+  <motion.div
+    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+    className="xs:w-[250px] w-full"
   >
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="relative  p-8 rounded-lg min-h-[280px]" // Add background and padding
+    <Tilt
+      tiltMaxAngleX={-20}
+      tiltMaxAngleY={-20}
+      scale={1}
+      transitionSpeed={450}
+      className="min-h-[280px] relative p-8"
     >
-      {/* Content wrapper with clip-path */}
-      <div className=" bg-dark rounded-lg absolute inset-0 flex flex-col items-center justify-center space-y-4">
+      <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10 diagonal-cut" />
+      <div className="bg-dark rounded-2xl absolute inset-0 flex flex-col items-center justify-center space-y-4 diagonal-cut">
         <img
           src={icon}
           alt="web-development"
@@ -33,8 +33,8 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
           {title}
         </h3>
       </div>
-    </motion.div>
-  </Tilt>
+    </Tilt>
+  </motion.div>
 );
 
 export default ServiceCard;

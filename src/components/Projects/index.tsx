@@ -20,13 +20,18 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="description-text"
+          className="description-text "
         >
           {content.works.paragraph}
         </motion.p>
       </div>
 
-      <div className="mt-6 md:mt-12 flex flex-wrap gap-7">
+      <div
+        className="mt-6 md:mt-12 
+      flex items-start flex-wrap 
+      gap-12
+      xl:justify-between"
+      >
         {content.works.projects.map((project, index) => (
           <Suspense
             key={`project-${index}`}

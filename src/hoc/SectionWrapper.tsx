@@ -14,11 +14,11 @@ const StarWrapper = (
   function HOC() {
     return (
       <motion.section
-        variants={staggerContainer(0.5, 0.1)} // I've added example values here as staggerContainer expects two arguments.
+        variants={staggerContainer(0.5, 0.1)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={` max-w-7xl mx-auto relative z-0 mb-12 md:mb-48`}
+        viewport={{ once: true }}
+        className={`w-full max-w-7xl mx-auto relative z-0 mb-12 md:mb-48`}
         id={idName}
       >
         <Component />
