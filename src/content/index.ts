@@ -15,10 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   threejs,
 } from "../assets";
 
@@ -36,6 +32,10 @@ const content = {
       {
         id: "projects",
         title: "PROJECTS",
+      },
+      {
+        id: "contact",
+        title: "CONTACT",
       },
     ],
   },
@@ -76,7 +76,7 @@ const content = {
       {
         title: "React.js Developer",
         company_name: "Starbucks",
-        icon: starbucks,
+        icon: "company/starbucks.png",
         iconBg: "#ffffff",
         date: "March 2020 - April 2021",
         points: [
@@ -89,7 +89,7 @@ const content = {
       {
         title: "React Native Developer",
         company_name: "Tesla",
-        icon: tesla,
+        icon: "company/tesla.png",
         iconBg: "#E6DEDD",
         date: "Jan 2021 - Feb 2022",
         points: [
@@ -102,7 +102,7 @@ const content = {
       {
         title: "Web Developer",
         company_name: "Shopify",
-        icon: shopify,
+        icon: "company/shopify.png",
         iconBg: "#383E56",
         date: "Jan 2022 - Jan 2023",
         points: [
@@ -115,7 +115,7 @@ const content = {
       {
         title: "Full stack Developer",
         company_name: "Meta",
-        icon: meta,
+        icon: "company/meta.png",
         iconBg: "#E6DEDD",
         date: "Jan 2023 - Present",
         points: [
@@ -256,6 +256,13 @@ const content = {
         source_code_link: "https://github.com/",
       },
     ],
+  },
+  contact: {
+    overTitle: "WHERE TO FIND ME",
+    title: "CONTACTS.",
+    paragraph:
+      "folal flasfjoisaje foaj foiasej fsoai fjsoijf se iojsofj seoi fj",
+    email: "slm",
   },
 };
 

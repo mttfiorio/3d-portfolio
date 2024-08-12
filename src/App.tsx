@@ -5,12 +5,11 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
+  Projects,
+  Tech,
 } from "./components/index";
-import Projects from "./components/Projects";
-import Tech from "./components/About/Tech";
 
 const App = () => {
   return (
@@ -22,12 +21,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Projects />
-        <div className="relative z-0">
-          {
-            //<Contact />
-            // <StarsCanvas />
-          }
-        </div>
+        <Contact />
       </div>
     </BrowserRouter>
   );

@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import Tech from "./Tech";
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
+  Tech,
 };

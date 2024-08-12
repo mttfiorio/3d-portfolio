@@ -51,7 +51,7 @@ const Sphere = () => {
 
 const SphereCanvas = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 5] }}>
+    <Canvas camera={{ position: [0, 0, 5] }} frameloop="always">
       <Sphere />
     </Canvas>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
 import content from "../../content";
-import BallCanvas from "../Experience/BallCanvas";
+import BallCanvas from "./BallCanvas";
 import { SectionWrapper } from "../../hoc";
 
 const Tech = () => {
