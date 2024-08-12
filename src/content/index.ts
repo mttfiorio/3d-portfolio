@@ -263,6 +263,8 @@ const content = {
     paragraph:
       "folal flasfjoisaje foaj foiasej fsoai fjsoijf se iojsofj seoi fj",
     email: "slm",
+    linkedin: "https://www.linkedin.com/in/mattia-fiorio/",
+    git: "https://github.com/mttfiorio",
   },
 };
 
