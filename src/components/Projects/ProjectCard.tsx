@@ -51,7 +51,7 @@ const VideoWrapper = ({ videoSrc, children }: VideoWrapper) => {
         loop
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src={videoSrc} type="video/mp4" />
+        <source src={"projects/" + videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="relative z-10 bg-dark/80">{children}</div>

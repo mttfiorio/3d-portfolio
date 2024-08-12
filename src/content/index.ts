@@ -1,23 +1,3 @@
-import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  threejs,
-} from "../assets";
-
 const content = {
   navbar: {
     navLinks: [
@@ -53,19 +33,15 @@ const content = {
     services: [
       {
         title: "Web Developer",
-        icon: web,
+        icon: "web.avif",
       },
       {
         title: "Backend Developer",
-        icon: backend,
+        icon: "backend.avif",
       },
       {
         title: "Game Developer",
-        icon: mobile,
-      },
-      {
-        title: "?",
-        icon: creator,
+        icon: "game.avif",
       },
     ],
   },
@@ -74,9 +50,9 @@ const content = {
     title: "ANOTHER BIG ASS TITLE.",
     experiences: [
       {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: "company/starbucks.png",
+        title: "Full-stack Developer",
+        company_name: "AKQA",
+        icon: "akqa.avif",
         iconBg: "#ffffff",
         date: "March 2020 - April 2021",
         points: [
@@ -87,10 +63,10 @@ const content = {
         ],
       },
       {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: "company/tesla.png",
-        iconBg: "#E6DEDD",
+        title: "Web Developer",
+        company_name: "CLIO",
+        icon: "clio.avif",
+        iconBg: "#ffffff",
         date: "Jan 2021 - Feb 2022",
         points: [
           "Developing and maintaining web applications using React.js and other related technologies.",
@@ -100,24 +76,11 @@ const content = {
         ],
       },
       {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: "company/shopify.png",
-        iconBg: "#383E56",
+        title: "Game Developer",
+        company_name: "MOVIESTAR PLANET",
+        icon: "msp.avif",
+        iconBg: "#ffffff",
         date: "Jan 2022 - Jan 2023",
-        points: [
-          "Developing and maintaining web applications using React.js and other related technologies.",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-      },
-      {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: "company/meta.png",
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
         points: [
           "Developing and maintaining web applications using React.js and other related technologies.",
           "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -131,55 +94,43 @@ const content = {
     technologies: [
       {
         name: "HTML 5",
-        icon: html,
+        icon: "html.avif",
       },
       {
         name: "CSS 3",
-        icon: css,
+        icon: "css.avif",
       },
       {
         name: "JavaScript",
-        icon: javascript,
+        icon: "javascript.avif",
       },
       {
         name: "TypeScript",
-        icon: typescript,
+        icon: "typescript.avif",
       },
       {
         name: "React JS",
-        icon: reactjs,
-      },
-      {
-        name: "Redux Toolkit",
-        icon: redux,
+        icon: "reactjs.avif",
       },
       {
         name: "Tailwind CSS",
-        icon: tailwind,
+        icon: "tailwind.avif",
       },
       {
         name: "Node JS",
-        icon: nodejs,
-      },
-      {
-        name: "MongoDB",
-        icon: mongodb,
+        icon: "nodejs.avif",
       },
       {
         name: "Three JS",
-        icon: threejs,
+        icon: "threejs.avif",
       },
       {
         name: "git",
-        icon: git,
+        icon: "git.avif",
       },
       {
         name: "figma",
-        icon: figma,
-      },
-      {
-        name: "docker",
-        icon: docker,
+        icon: "figma.avif",
       },
     ],
   },
@@ -207,8 +158,8 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: "projects/change-desktop.webp",
-        video: "projects/change-video.mp4",
+        image: "change-desktop.webp",
+        video: "change-video.mp4",
         source_code_link: "https://github.com/",
       },
       {
@@ -229,8 +180,8 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: "projects/dilling-desktop.webp",
-        video: "projects/dilling-video.mp4",
+        image: "dilling-desktop.webp",
+        video: "dilling-video.mp4",
         source_code_link: "https://github.com/",
       },
       {
@@ -251,8 +202,8 @@ const content = {
             color: "pink-text-gradient",
           },
         ],
-        image: "projects/mercell-desktop.webp",
-        video: "projects/mercell-video.mp4",
+        image: "mercell-desktop.webp",
+        video: "mercell-video.mp4",
         source_code_link: "https://github.com/",
       },
     ],

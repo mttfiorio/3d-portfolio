@@ -41,6 +41,7 @@ type BallCanvasProps = {
 };
 
 const BallCanvas = ({ icon }: BallCanvasProps) => {
+  if (!icon) return null;
   return (
     <Canvas
       frameloop="always"
@@ -49,7 +50,7 @@ const BallCanvas = ({ icon }: BallCanvasProps) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball icon={icon} />
+        <Ball icon={"tech/" + icon} />
       </Suspense>
 
       <Preload all />

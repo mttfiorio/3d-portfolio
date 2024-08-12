@@ -24,10 +24,10 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
       <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10 diagonal-cut" />
       <div className="bg-dark rounded-2xl absolute inset-0 flex flex-col items-center justify-center space-y-4 diagonal-cut">
         <img
-          src={icon}
+          src={"about/" + icon}
           loading="lazy"
           alt={title}
-          className="w-16 h-16 object-contain"
+          className="w-36 h-36 object-contain"
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">

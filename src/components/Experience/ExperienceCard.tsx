@@ -28,11 +28,12 @@ const ExperienceCard = ({
       }}
       contentArrowStyle={{ borderRight: "7px solid  var(--color-dark)" }}
       date={date}
+      dateClassName="text-light xl:text-dark"
       iconStyle={{ background: iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
-            src={icon}
+            src={"experience/" + icon}
             loading="lazy"
             alt={company_name}
             className="w-[60%] h-[60%] object-contain"
@@ -42,19 +43,16 @@ const ExperienceCard = ({
     >
       <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10" />
       <div className="absolute w-full h-full bg-dark rounded-2xl left-0 top-0 -z-10" />
-      <h3 className="text-white text-[24px] font-bold">{title}</h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
+      <p className="over-text !tracking-[6px]" style={{ margin: 0 }}>
         {company_name}
       </p>
+      <h3 className="text-white">{title}</h3>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-light text-[14px] pl-1 tracking-wider"
           >
             {point}
           </li>
