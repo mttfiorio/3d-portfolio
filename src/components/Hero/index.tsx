@@ -61,7 +61,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-screen h-[400vh] mx-auto mb-12 md:mb-48 bg-black"
+      className="relative w-screen h-[400vh] mx-auto mb-24 bg-black"
       id="hero-section"
       style={{ opacity }}
     >
@@ -72,10 +72,10 @@ const Hero = () => {
         <div className="over-text">{content.hero.name}</div>
         <h1>
           {content.hero.title.map((str) => (
-            <>
+            <div key={str}>
               <br />
               {str}
-            </>
+            </div>
           ))}
         </h1>
       </div>

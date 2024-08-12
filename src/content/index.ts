@@ -56,15 +56,15 @@ const content = {
         icon: web,
       },
       {
-        title: "React Native Developer",
-        icon: mobile,
-      },
-      {
         title: "Backend Developer",
         icon: backend,
       },
       {
-        title: "Content Creator",
+        title: "Game Developer",
+        icon: mobile,
+      },
+      {
+        title: "?",
         icon: creator,
       },
     ],

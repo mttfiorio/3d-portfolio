@@ -62,7 +62,9 @@ const Navbar = () => {
             className={"cursor-pointer"}
             onClick={() => scrollToSection(nav.id)}
           >
-            <a className="p-1 pr-0">{nav.title}</a>
+            <a href={`#${nav.id}`} className="p-1 pr-0" aria-label={nav.title}>
+              {nav.title}
+            </a>
           </h5>
         ))}
       </div>

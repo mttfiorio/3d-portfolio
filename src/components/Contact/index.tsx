@@ -22,6 +22,10 @@ const Contact = () => {
         <h2>{content.contact.title}</h2>
       </motion.div>
 
+      <motion.p className="description-text" variants={fadeIn("", "", 0.1, 1)}>
+        {content.contact.paragraph}
+      </motion.p>
+
       <div
         className="mt-6 md:mt-12 
         flex justify-start items-center flex-wrap 
@@ -34,6 +38,7 @@ const Contact = () => {
               hover:bg-light hover:text-dark 
               border-2 border-solid border-light hover:border-dark"
           download={true}
+          aria-label="Resume"
         >
           Resume <IcoArrowUpRightFromSquare />
         </a>
@@ -51,7 +56,7 @@ const Contact = () => {
             style={{ clipPath: "polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%)" }}
           />
         </a>
-        <a href={content.contact.linkedin} aria-label="GitHub">
+        <a href={content.contact.git} aria-label="GitHub">
           <IcoGit size="2.7em" className={`${iconsStyles} rounded-full`} />
         </a>
       </div>

@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Euler, Mesh, Quaternion } from "three";
+import CanvasLoader from "../Loader";
 
 const Sphere = () => {
   // THis ended up being a lot of math and complexity :/
@@ -52,7 +53,9 @@ const Sphere = () => {
 const SphereCanvas = () => {
   return (
     <Canvas camera={{ position: [0, 0, 5] }} frameloop="always">
-      <Sphere />
+      <Suspense fallback={<CanvasLoader />}>
+        <Sphere />
+      </Suspense>
     </Canvas>
   );
 };

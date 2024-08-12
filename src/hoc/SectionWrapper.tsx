@@ -18,7 +18,7 @@ const StarWrapper = (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className={`w-full max-w-7xl mx-auto relative z-0 mb-12 md:mb-48`}
+        className={`w-full max-w-7xl mx-auto relative z-0 mb-24 md:mb-48`}
         id={idName}
       >
         <Component />

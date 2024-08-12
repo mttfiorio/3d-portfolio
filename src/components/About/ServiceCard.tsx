@@ -25,7 +25,8 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
       <div className="bg-dark rounded-2xl absolute inset-0 flex flex-col items-center justify-center space-y-4 diagonal-cut">
         <img
           src={icon}
-          alt="web-development"
+          loading="lazy"
+          alt={title}
           className="w-16 h-16 object-contain"
         />
 

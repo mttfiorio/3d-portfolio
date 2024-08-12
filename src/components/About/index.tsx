@@ -1,10 +1,13 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import content from "../../content";
-import ServiceCard from "./ServiceCard";
+
+const LazyServiceCard = lazy(
+  () => import(/* webpackMode: "lazy-once" */ "./ServiceCard"),
+);
 
 const About = () => {
   return (
@@ -24,7 +27,14 @@ const About = () => {
       gap-12 xl:justify-between"
       >
         {content.about.services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <Suspense
+            key={service.title}
+            fallback={
+              <div className="bg-dark p-5 rounded-2xl sm:w-[360px] w-full h-[350px] animate-pulse" />
+            }
+          >
+            <LazyServiceCard index={index} {...service} />
+          </Suspense>
         ))}
       </div>
     </div>
