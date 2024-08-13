@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import content from "../../content";
-import ProjectCard from "./ProjectCard";
+
+const ProjectCard = lazy(() => import("./ProjectCard"));
 
 const Projects = () => {
   return (

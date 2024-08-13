@@ -192,7 +192,7 @@ const content = {
         ],
         image: "dilling-desktop.webp",
         video: "dilling-video.mp4",
-        source_code_link: "https://dk.dilling.com/",
+        link: "https://dk.dilling.com/",
       },
       {
         name: "Mercell",
@@ -214,7 +214,7 @@ const content = {
         ],
         image: "mercell-desktop.webp",
         video: "mercell-video.mp4",
-        source_code_link: "https://info.mercell.com/en",
+        link: "https://info.mercell.com/en",
       },
     ],
   },

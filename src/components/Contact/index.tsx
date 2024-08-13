@@ -44,7 +44,11 @@ const Contact = () => {
           </a>
         )}
         {content.contact.email && (
-          <a href={`mailto:${content.contact.email}`} target={"_blank"}>
+          <a
+            href={`mailto:${content.contact.email}`}
+            target={"_blank"}
+            aria-label="mailto"
+          >
             <IcoMail
               size="3rem"
               className={`${iconsStyles}`}
