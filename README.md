@@ -1,6 +1,8 @@
 ## Overview
 
-This portfolio project showcases a unique 3D interactive experience, built using React, Next.js, and react-three-fiber.
+This portfolio project showcases an optimized 3D interactive experience, built using React, Tailwind, react-three-fiber and framer-motion.
+
+Design was made using Figma.
 
 ## Getting Started
 
