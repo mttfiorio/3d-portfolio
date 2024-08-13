@@ -4,9 +4,7 @@
 
 :root {
   --color-primary: #ebe322;
-  --color-secondary: #b421eb;
-  --color-tertiary: #3021eb;
-  --color-dark: #1f1f1f;
+  --color-dark: #000000;
   font-family: "Exo 2", sans-serif;
   color: var(--color-dark);
 }
