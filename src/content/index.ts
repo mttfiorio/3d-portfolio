@@ -26,8 +26,8 @@ const content = {
       "it looks like something is missing in this part of the website, maybe a short summary?",
   },
   about: {
-    overTitle: "INTRODUCTION",
-    title: "BIG ASS TITLE.",
+    overTitle: "WHAT I DO",
+    title: "INTRODUCTION.",
     paragraph:
       "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",
     services: [
@@ -46,8 +46,8 @@ const content = {
     ],
   },
   experience: {
-    overTitle: "WHAT?",
-    title: "ANOTHER BIG ASS TITLE.",
+    overTitle: "WHERE I WORKED",
+    title: "EXPERIENCE.",
     experiences: [
       {
         title: "Full-stack Developer",
@@ -112,17 +112,26 @@ const content = {
         name: "React JS",
         icon: "reactjs.avif",
       },
+
+      {
+        name: "nextjs",
+        icon: "nextjs.avif",
+      },
       {
         name: "Tailwind CSS",
         icon: "tailwind.avif",
       },
       {
-        name: "Node JS",
-        icon: "nodejs.avif",
+        name: "playwright",
+        icon: "playwright.avif",
       },
       {
-        name: "Three JS",
-        icon: "threejs.avif",
+        name: "jest",
+        icon: "jest.avif",
+      },
+      {
+        name: "Node JS",
+        icon: "nodejs.avif",
       },
       {
         name: "git",
@@ -131,6 +140,15 @@ const content = {
       {
         name: "figma",
         icon: "figma.avif",
+      },
+      {
+        name: "unity",
+        icon: "unity.avif",
+      },
+
+      {
+        name: "dotnet",
+        icon: "dotnet.avif",
       },
     ],
   },
@@ -209,13 +227,14 @@ const content = {
     ],
   },
   contact: {
-    overTitle: "WHERE TO FIND ME",
+    overTitle: "HOW TO FIND ME",
     title: "CONTACTS.",
     paragraph:
       "folal flasfjoisaje foaj foiasej fsoai fjsoijf se iojsofj seoi fj",
     email: "slm",
     linkedin: "https://www.linkedin.com/in/mattia-fiorio/",
     git: "https://github.com/mttfiorio",
+    pdf: null,
   },
 };
 

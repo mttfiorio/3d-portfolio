@@ -1,19 +1,25 @@
 import Hero from "./Hero";
 import Navbar from "./Navigation";
-import About from "./About";
-import Experience from "./Experience";
-import Projects from "./Projects";
-import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-import Tech from "./Tech";
+import { lazy } from "react";
+
+const LazyAbout = lazy(() => import("./About"));
+
+const LazyExperience = lazy(() => import("./Experience"));
+
+const LazyProjects = lazy(() => import("./Projects"));
+
+const LazyContact = lazy(() => import("./Contact"));
+
+const LazyTech = lazy(() => import("./Tech"));
 
 export {
   Hero,
   Navbar,
-  About,
-  Experience,
-  Projects,
-  Contact,
   CanvasLoader,
-  Tech,
+  LazyAbout,
+  LazyExperience,
+  LazyProjects,
+  LazyContact,
+  LazyTech,
 };

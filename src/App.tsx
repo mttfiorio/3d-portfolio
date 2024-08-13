@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import {
-  About,
-  Contact,
-  Experience,
   Hero,
+  LazyAbout,
+  LazyContact,
+  LazyExperience,
+  LazyProjects,
+  LazyTech,
   Navbar,
-  Projects,
-  Tech,
 } from "./components/index";
 
 const App = () => {
@@ -17,11 +17,11 @@ const App = () => {
       <Navbar />
       <div className="relative flex flex-col items-center bg-primary">
         <Hero />
-        <About />
-        <Experience />
-        <Tech />
-        <Projects />
-        <Contact />
+        <LazyAbout />
+        <LazyExperience />
+        <LazyTech />
+        <LazyProjects />
+        <LazyContact />
       </div>
     </BrowserRouter>
   );

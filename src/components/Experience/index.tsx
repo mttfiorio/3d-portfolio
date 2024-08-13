@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 import { textVariant } from "../../utils/motion";
-import BallCanvas from "../Tech/BallCanvas";
 import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import ExperienceCard from "./ExperienceCard";

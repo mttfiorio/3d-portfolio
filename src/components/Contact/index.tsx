@@ -1,8 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
-import ComputerCanvas from "./ComputerCanvas";
 import content from "../../content";
 import {
   IcoArrowUpRightFromSquare,
@@ -31,34 +30,42 @@ const Contact = () => {
         flex justify-start items-center flex-wrap 
         gap-12"
       >
-        <a
-          href="/dummy.pdf"
-          target={"_blank"}
-          className="flex items-center gap-2 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+        {content.contact.pdf && (
+          <a
+            href={content.contact.pdf}
+            target={"_blank"}
+            className="flex items-center gap-2 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
               hover:bg-light hover:text-dark 
               border-2 border-solid border-light hover:border-dark"
-          download={true}
-          aria-label="Resume"
-        >
-          Resume <IcoArrowUpRightFromSquare />
-        </a>
-        <a href={`mailto:${content.contact.email}`} target={"_blank"}>
-          <IcoMail
-            size="3rem"
-            className={`${iconsStyles}`}
-            style={{ clipPath: "polygon(5% 15%, 95% 15%, 95% 85%, 5% 85%)" }}
-          />
-        </a>
-        <a href={content.contact.linkedin} aria-label="Linkedin">
-          <IcoLinkedin
-            size="2.8rem"
-            className={`${iconsStyles}`}
-            style={{ clipPath: "polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%)" }}
-          />
-        </a>
-        <a href={content.contact.git} aria-label="GitHub">
-          <IcoGit size="2.7em" className={`${iconsStyles} rounded-full`} />
-        </a>
+            download={true}
+            aria-label="Resume"
+          >
+            Resume <IcoArrowUpRightFromSquare />
+          </a>
+        )}
+        {content.contact.email && (
+          <a href={`mailto:${content.contact.email}`} target={"_blank"}>
+            <IcoMail
+              size="3rem"
+              className={`${iconsStyles}`}
+              style={{ clipPath: "polygon(5% 15%, 95% 15%, 95% 85%, 5% 85%)" }}
+            />
+          </a>
+        )}
+        {content.contact.linkedin && (
+          <a href={content.contact.linkedin} aria-label="Linkedin">
+            <IcoLinkedin
+              size="2.8rem"
+              className={`${iconsStyles}`}
+              style={{ clipPath: "polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%)" }}
+            />
+          </a>
+        )}
+        {content.contact.git && (
+          <a href={content.contact.git} aria-label="GitHub">
+            <IcoGit size="2.7em" className={`${iconsStyles} rounded-full`} />
+          </a>
+        )}
       </div>
 
       {/*

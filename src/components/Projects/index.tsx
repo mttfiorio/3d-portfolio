@@ -1,13 +1,10 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import content from "../../content";
-
-const LazyProjectCard = lazy(
-  () => import(/* webpackMode: "lazy-once" */ "./ProjectCard"),
-);
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
@@ -39,7 +36,7 @@ const Projects = () => {
               <div className="bg-dark p-5 rounded-2xl sm:w-[360px] w-full h-[350px] animate-pulse" />
             }
           >
-            <LazyProjectCard index={index} {...project} />
+            <ProjectCard index={index} {...project} />
           </Suspense>
         ))}
       </div>
