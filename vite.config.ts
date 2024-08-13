@@ -11,11 +11,8 @@ export default defineConfig({
           react: ["react", "react-dom", "react-router-dom"],
           three: ["three"],
           threeFiber: ["@react-three/fiber", "@react-three/drei"],
-          utils: [
-            "react-vertical-timeline-component",
-            "react-parallax-tilt",
-            "framer-motion",
-          ],
+          landingUtils: ["framer-motion"],
+          utils: ["react-vertical-timeline-component", "react-parallax-tilt"],
         },
       },
     },
