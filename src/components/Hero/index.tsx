@@ -66,16 +66,15 @@ const Hero = () => {
       style={{ opacity }}
     >
       <div
-        className="absolute text-white w-full h-screen flex flex-col justify-center items-center z-10
-      text-center"
+        className="absolute text-white text-center w-full h-screen 
+        flex flex-col justify-center items-center gap-12
+        z-10
+      "
       >
         <div className="over-text">{content.hero.name}</div>
-        <h1>
+        <h1 className="flex flex-col gap-6 md:gap-8 h-fit">
           {content.hero.title.map((str) => (
-            <div key={str}>
-              <br />
-              {str}
-            </div>
+            <div key={str}>{str}</div>
           ))}
         </h1>
       </div>

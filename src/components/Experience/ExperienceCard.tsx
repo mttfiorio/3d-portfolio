@@ -43,19 +43,14 @@ const ExperienceCard = ({
     >
       <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10" />
       <div className="absolute w-full h-full bg-dark rounded-2xl left-0 top-0 -z-10" />
-      <p className="over-text !tracking-[6px]" style={{ margin: 0 }}>
+      <p className="over-text" style={{ margin: 0 }}>
         {company_name}
       </p>
       <h3 className="text-white">{title}</h3>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-light text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
+          <li key={`experience-point-${index}`}>{point}</li>
         ))}
       </ul>
     </VerticalTimelineElement>

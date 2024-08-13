@@ -28,8 +28,6 @@ const App = () => {
     return <div className="w-full h-[500px]">Loading...</div>;
   };
 
-  console.log(experienceInView);
-
   return (
     <BrowserRouter>
       <Navbar />

@@ -22,14 +22,12 @@ const content = {
   hero: {
     name: "MATTIA FIORIO",
     title: ["DEVELOPER", "SINCE 2013"],
-    description:
-      "it looks like something is missing in this part of the website, maybe a short summary?",
   },
   about: {
     overTitle: "WHAT I DO",
-    title: "INTRODUCTION.",
+    title: "ABOUT.",
     paragraph:
-      "I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",
+      "As a savvy developer with a soft spot for web tech and gaming, I'm like a sponge when it comes to new tech stacks. I love nothing more than whipping up efficient, scalable solutions that not only work like a charm but also keep audiences hooked.",
     services: [
       {
         title: "Web Developer",
@@ -54,12 +52,11 @@ const content = {
         company_name: "AKQA",
         icon: "akqa.avif",
         iconBg: "#ffffff",
-        date: "March 2020 - April 2021",
+        date: "January 2023 - Current",
         points: [
-          "Developing and maintaining web applications using React.js and other related technologies.",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
+          "Creating and sprucing up web applications using cool tools like Next.js and more.",
+          "Teaming up with a diverse group of creatives - designers, product managers, and fellow developers to build top-notch products.",
+          "Showcasing leadership as a Technical Delivery Manager, ensuring seamless teamwork and delivering quality results on time.",
         ],
       },
       {
@@ -67,25 +64,24 @@ const content = {
         company_name: "CLIO",
         icon: "clio.avif",
         iconBg: "#ffffff",
-        date: "Jan 2021 - Feb 2022",
+        date: "March 2020 - December 2022",
         points: [
-          "Developing and maintaining web applications using React.js and other related technologies.",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
+          "Revamped Clio's SaaS e-learning platform using React components and SOLID principles, making learning a breeze.",
+          "Implemented E2E tests with Selenium and Playwright to ensure everything runs smoothly.",
+          "Boosted the team's productivity by promoting agile methodologies - because who doesn't love being agile?",
+          "Played a key role in agile rituals, handling estimations and sprint planning like a pro.",
         ],
       },
       {
-        title: "Game Developer",
+        title: "Game Developer (but not only)",
         company_name: "MOVIESTAR PLANET",
         icon: "msp.avif",
         iconBg: "#ffffff",
-        date: "Jan 2022 - Jan 2023",
+        date: "April 2013 - February 2020",
         points: [
-          "Developing and maintaining web applications using React.js and other related technologies.",
-          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-          "Implementing responsive design and ensuring cross-browser compatibility.",
-          "Participating in code reviews and providing constructive feedback to other developers.",
+          "Developed in-game features for a massively multiplayer game with over 100 million users across platforms, paying attention to UI improvements and backend functionalities.",
+          "Boosted productivity by cutting down on marketing and support tasks, thanks to handy data management tools built with ASP.NET",
+          "Assisted game teams by developing a Unity3D framework with handy plug-and-play elements, simplifying the game creation process.",
         ],
       },
     ],
@@ -156,73 +152,69 @@ const content = {
     overTitle: "MY WORK",
     title: "PROJECTS.",
     paragraph:
-      "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+      "Here's a sneak peek at some projects that put my skills to the test. You'll find a quick rundown of each, along with links to check them out in action. Enjoy the tour!",
     projects: [
       {
-        name: "Car Rent",
+        name: "Change Lingerie",
         description:
-          "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+          "Feast your eyes on this sizzling e-commerce website for lingerie. I worked my magic on both the frontend and backend, with a special focus on making payments as smooth as silk.",
         tags: [
           {
-            name: "react",
-            color: "blue-text-gradient",
+            name: "nextjs",
+            color: "text-sky-500",
           },
           {
-            name: "mongodb",
-            color: "green-text-gradient",
+            name: "chakra-ui",
+            color: "text-stone-400",
           },
           {
-            name: "tailwind",
-            color: "pink-text-gradient",
+            name: "nestjs",
+            color: "text-red-500",
           },
         ],
         image: "change-desktop.webp",
         video: "change-video.mp4",
-        source_code_link: "https://github.com/",
+        link: "https://www.change.com/dk",
       },
       {
-        name: "Job IT",
+        name: "Dilling",
         description:
-          "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+          "Check out this cozy e-commerce site that is warming hearts in multiple countries. I've had my hands in both the frontend and backend cookie jars, this time with a sprinkle of .NET",
         tags: [
           {
-            name: "react",
-            color: "blue-text-gradient",
+            name: "nextjs",
+            color: "text-sky-500",
           },
           {
-            name: "restapi",
-            color: "green-text-gradient",
-          },
-          {
-            name: "scss",
-            color: "pink-text-gradient",
+            name: ".net",
+            color: "text-emerald-400",
           },
         ],
         image: "dilling-desktop.webp",
         video: "dilling-video.mp4",
-        source_code_link: "https://github.com/",
+        source_code_link: "https://dk.dilling.com/",
       },
       {
-        name: "Trip Guide",
+        name: "Mercell",
         description:
-          "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+          "Take a gander at this sleek fully headless info website. The deadline was tighter than a drum, but hey, who doesn't love a good challenge?",
         tags: [
           {
             name: "nextjs",
-            color: "blue-text-gradient",
+            color: "text-sky-500",
           },
           {
-            name: "supabase",
-            color: "green-text-gradient",
+            name: "tailwind",
+            color: "text-blue-600",
           },
           {
-            name: "css",
-            color: "pink-text-gradient",
+            name: "umbraco",
+            color: "text-purple-600",
           },
         ],
         image: "mercell-desktop.webp",
         video: "mercell-video.mp4",
-        source_code_link: "https://github.com/",
+        source_code_link: "https://info.mercell.com/en",
       },
     ],
   },
@@ -230,7 +222,7 @@ const content = {
     overTitle: "HOW TO FIND ME",
     title: "CONTACTS.",
     paragraph:
-      "folal flasfjoisaje foaj foiasej fsoai fjsoijf se iojsofj seoi fj",
+      "Got a project in mind, or just want to say hi? Don't be shy! Drop me a line, and let's start a conversation. Whether it's about work, tech, or the latest gaming trends, I'm all ears!",
     email: "slm",
     linkedin: "https://www.linkedin.com/in/mattia-fiorio/",
     git: "https://github.com/mttfiorio",

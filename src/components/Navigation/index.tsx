@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { motion, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import content from "../../content";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-
   // Function to handle smooth scrolling with custom duration
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

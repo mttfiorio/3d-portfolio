@@ -15,39 +15,40 @@
 
 h1 {
   font-family: "Exo 2", sans-serif;
-  @apply text-[64px] md:text-[96px] font-extrabold leading-[80%] m-0;
+  @apply text-[64px] md:text-[96px] font-extrabold leading-[40%] m-0;
 }
 h2 {
   font-family: "Exo 2", sans-serif;
-  @apply text-[64px] font-bold  leading-[80%] m-0;
+  @apply text-[48px] md:text-[64px] font-bold  leading-[80%] m-0;
 }
 h3 {
   font-family: "Exo 2", sans-serif;
-  @apply text-[24px] font-semibold leading-[200%] m-0;
-}
-h4 {
-  font-family: "Titillium Web", sans-serif;
-  @apply text-[24px] font-semibold leading-[120%] tracking-widest m-0;
+  @apply text-[18px] md:text-[24px] font-semibold leading-[200%] m-0;
 }
 
 p {
   font-family: "Titillium Web", sans-serif;
-  @apply text-[20px] font-light  leading-[175%] m-0;
+  @apply text-[16px] md:text-[20px] font-light leading-[170%] md:leading-[160%] m-0;
+}
+
+li {
+  font-family: "Titillium Web", sans-serif;
+  @apply text-[16px] md:text-[20px] font-light leading-[170%] md:leading-[160%] m-0;
 }
 
 .over-text {
   font-family: "Titillium Web", sans-serif;
-  @apply text-[16px] font-light leading-[120%] tracking-[8px] ml-1 mb-2;
+  @apply text-[12px] md:text-[16px] font-light leading-[100%] md:leading-[120%] tracking-[6px] md:tracking-[6px] ml-1 mb-2;
 }
 
 .description-text {
   font-family: "Titillium Web", sans-serif;
-  @apply text-[20px] font-light leading-[175%] mt-4 ml-1;
+  @apply text-[16px] md:text-[20px] font-light leading-[170%] md:leading-[160%] mt-4 ml-1;
 }
 
 .menu-text {
   font-family: "Titillium Web", sans-serif;
-  @apply text-[12px] md:text-[14px] font-bold tracking-[6px] md:tracking-[8px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)];
+  @apply text-[10px] md:text-[14px] font-bold tracking-[6px] md:tracking-[8px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)];
 }
 
 .vertical-timeline-element-icon {

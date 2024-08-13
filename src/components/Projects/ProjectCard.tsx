@@ -15,7 +15,7 @@ interface ProjectCardProps {
   tags: Tag[];
   image: string;
   video: string;
-  source_code_link: string;
+  link: string;
 }
 
 interface VideoWrapper {
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   tags,
   image,
-  source_code_link,
+  link,
   video,
 }) => {
   return (
