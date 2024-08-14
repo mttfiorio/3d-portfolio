@@ -24,7 +24,7 @@ const Sphere = () => {
         // Reset the sphere rotation, which changes as time passes (the else below)
         sphereRef.current.quaternion.slerp(endQuaternion, 0.1);
       } else {
-        sphereRef.current.rotateY(0.005);
+        sphereRef.current.rotateY(0.01);
       }
 
       //Control zoom on scroll
@@ -38,13 +38,13 @@ const Sphere = () => {
   return (
     <mesh ref={sphereRef}>
       <sphereGeometry args={[1, 32, 32]} />
-      <meshStandardMaterial color="#fcf400" />
+      <meshStandardMaterial color="#EBE322" />
       <spotLight
         position={[5, 5, 5]}
         angle={0.2}
         penumbra={1}
         intensity={0.5}
-        color={"#fcf400"}
+        color={"#ffffff"}
       />
     </mesh>
   );
