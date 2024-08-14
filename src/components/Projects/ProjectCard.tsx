@@ -77,20 +77,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         transitionSpeed={450}
         className="xs:w-[360px] w-full "
       >
-        <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10 diagonal-cut-mirrored" />
-        <VideoWrapper videoSrc={video}>
-          <div className="p-6 flex flex-col gap-4">
-            <h3 className="text-white">{name}</h3>
-            <p className="text-white">{description}</p>
-            <div className="mt-4 flex flex-wrap justify-end gap-2">
-              {tags.map((tag) => (
-                <p key={`${name}-${tag.name}`} className={`${tag.color}`}>
-                  #{tag.name}
-                </p>
-              ))}
+        <a href={link} aria-label={name + "-link"}>
+          <div className="absolute w-full h-full bg-white rounded-2xl left-1 top-1 -z-10 diagonal-cut-mirrored" />
+          <VideoWrapper videoSrc={video}>
+            <div className="p-6 flex flex-col gap-4">
+              <h3 className="text-white">{name}</h3>
+              <p className="text-white">{description}</p>
+              <div className="mt-4 flex flex-wrap justify-end gap-2">
+                {tags.map((tag) => (
+                  <p key={`${name}-${tag.name}`} className={`${tag.color}`}>
+                    #{tag.name}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
-        </VideoWrapper>
+          </VideoWrapper>
+        </a>
       </Tilt>
     </motion.div>
   );

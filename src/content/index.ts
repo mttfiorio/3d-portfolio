@@ -223,8 +223,8 @@ const content = {
     title: "CONTACTS.",
     paragraph:
       "Got a project in mind, or just want to say hi? Don't be shy! Drop me a line, and let's start a conversation. Whether it's about work, tech, or the latest gaming trends, I'm all ears!",
-    email: "slm",
-    linkedin: "https://www.linkedin.com/in/mattia-fiorio/",
+    email: "mattia.dev@posteo.com",
+    linkedin: "https://www.linkedin.com/in/mattiafiorio/",
     git: "https://github.com/mttfiorio",
     pdf: null,
   },
