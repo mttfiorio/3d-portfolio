@@ -1,6 +1,5 @@
-import React, { lazy, Suspense, useRef } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-
 import { Hero, Navbar } from "./components/index";
 
 const About = lazy(() => import("./components/About"));

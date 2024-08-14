@@ -14,13 +14,15 @@ To get started with this project:
 
 ## Optimization
 
-I spent some time optimizing the starting code. Unfortunately the Threejs library is still huge and since I'm using it in the landing Hero component, the score is not perfect.
+I spent some time optimizing the starting code. Unfortunately the Threejs library is huge and since I'm using it in the landing Hero component, the score is not perfect.
 
-To get here I had to lazy load all components and make them load when inView, as all my content is on the same page.
+I lazy loaded all pictures and videos. I also manually code split the various libraries, convert all images to .avif and finally clean-up unused imports.
 
-I also had to manually code split the various libraries, convert all images to .avif and finally clean-up unused imports.
+![Google lighthouse results](https://github.com/mttfiorio/3d-portfolio/blob/main/public/readme/lighthouse2.png?raw=true)
 
-![Google lighthouse results](https://github.com/mttfiorio/3d-portfolio/blob/main/public/readme/lighthouse.png?raw=true)
+I could reach a score of 90 when loading all components when inView, as all my content is on the same page. Unfortunately this broke the navigation menu so I had to revert.
+
+The design could be changed so that the menu appears after scrolling down. This could allow me to load all sections after scroll excluding the Hero where the user lands fist. I think though, that this option would make the website less usable and so I kept a lower score for a better UX.
 
 ## Acknowledgements
 
