@@ -42,8 +42,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed p-4 md:p-8 w-full top-0 z-20 
-        black-gradient
+      className={`fixed p-4 md:p-8 w-full top-0 z-20 bg-black/10
         menu-text`}
       initial={{ y: "-100%" }}
       animate={{
@@ -60,7 +59,7 @@ const Navbar = () => {
             className={"cursor-pointer"}
             onClick={() => scrollToSection(nav.id)}
           >
-            <a href={`#${nav.id}`} className="p-1 pr-0" aria-label={nav.title}>
+            <a href={`#${nav.id}`} className="p-1 pr-0 " aria-label={nav.title}>
               {nav.title}
             </a>
           </h5>

@@ -38,7 +38,7 @@ li {
 
 .over-text {
   font-family: "Titillium Web", sans-serif;
-  @apply text-[12px] md:text-[16px] font-light leading-[100%] md:leading-[120%] tracking-[6px] md:tracking-[6px] ml-1 mb-2;
+  @apply text-[12px] md:text-[16px] font-light leading-[100%] md:leading-[120%] tracking-[4px] md:tracking-[6px] ml-1 mb-2;
 }
 
 .description-text {
@@ -66,20 +66,6 @@ li {
 
   .diagonal-cut-mirrored {
     clip-path: polygon(80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%, 0 0);
-  }
-
-  .black-gradient {
-    background: var(--color-dark);
-    background: linear-gradient(
-      -90deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    background: -webkit-linear-gradient(
-      -90deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
   }
 }
 
