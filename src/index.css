@@ -51,20 +51,18 @@ li {
   @apply text-[10px] md:text-[14px] font-bold tracking-[6px] md:tracking-[8px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)];
 }
 
-.vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px var(--color-dark) !important;
-}
+@layer experience {
+  .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px var(--color-dark) !important;
+  }
 
-.vertical-timeline-element-content {
-  box-shadow: none !important;
+  .vertical-timeline-element-content {
+    box-shadow: none !important;
+  }
 }
 
 @layer utilities {
   .diagonal-cut {
-    clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
-  }
-
-  .diagonal-cut-mirrored {
     clip-path: polygon(80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%, 0 0);
   }
 }

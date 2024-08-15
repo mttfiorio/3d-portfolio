@@ -1,13 +1,13 @@
 import React, { lazy, Suspense } from "react";
-import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import SectionText from "../SectionText";
+import Section from "../Section";
 
 const ServiceCard = lazy(() => import("./ServiceCard"));
 
 const About = () => {
   return (
-    <div className="mx-4 md:mx-12">
+    <Section id="about">
       <SectionText
         overTitle={content.about.overTitle}
         title={content.about.title}
@@ -30,8 +30,8 @@ const About = () => {
           </Suspense>
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default About;

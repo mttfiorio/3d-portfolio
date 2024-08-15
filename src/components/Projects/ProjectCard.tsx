@@ -1,6 +1,6 @@
 import React, { useRef, ReactNode } from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../utils/motion";
+import Card from "../Card";
 
 interface Tag {
   name: string;
@@ -52,22 +52,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   video,
 }) => {
   return (
-    <motion.a
-      href={link}
-      aria-label={name + "-link"}
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="relative sm:w-[360px] min-h-[400px] w-full"
-    >
-      <div
-        className="absolute w-full h-full left-1 top-1 -z-10
-       bg-white rounded-2xl diagonal-cut-mirrored"
-      />
-
-      <div
-        className="absolute w-full h-full
-      rounded-2xl overflow-hidden diagonal-cut-mirrored "
-      >
-        <div className="relative p-6 w-full h-full flex flex-col justify-center gap-4 z-10 bg-dark/90">
+    <Card index={index}>
+      <a href={link} aria-label={name + "-link"} className="h-full w-full">
+        <div
+          className="relative w-full h-full z-10 
+        bg-dark/90 
+        p-6 rounded-2xl"
+        >
           <h3 className="text-white">{name}</h3>
           <p className="text-white">{description}</p>
           <div className="mt-4 flex flex-wrap justify-end gap-2">
@@ -78,15 +69,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ))}
           </div>
         </div>
-
         <img
           src={"projects/" + image}
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          alt={name}
+          className="absolute top-0 left-0 z-0
+          w-full h-full object-cover rounded-2xl"
         />
 
         <VideoWrapper videoSrc={video} />
-      </div>
-    </motion.a>
+      </a>
+    </Card>
   );
 };
 

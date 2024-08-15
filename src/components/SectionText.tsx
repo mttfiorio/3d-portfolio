@@ -8,13 +8,15 @@ interface SectionTextProps {
 }
 
 const textVariant = (delay: number): Variants => ({
-  hidden: { y: -50, opacity: 0 },
+  hidden: { x: -50, opacity: 0 },
   show: {
-    y: 0,
+    x: 0,
     opacity: 1,
-    transition: { type: "spring", duration: 1.25, delay },
+    transition: { type: "just", duration: 0.5, delay },
   },
 });
+
+const once = true;
 
 const SectionText = ({ overTitle, title, paragraph }: SectionTextProps) => {
   return (
@@ -22,9 +24,9 @@ const SectionText = ({ overTitle, title, paragraph }: SectionTextProps) => {
       <motion.p variants={textVariant(0)} className="over-text">
         {overTitle}
       </motion.p>
-      <motion.h2 variants={textVariant(0.5)}>{title}</motion.h2>
+      <motion.h2 variants={textVariant(0.3)}>{title}</motion.h2>
       {paragraph && (
-        <motion.p className="description-text" variants={textVariant(1)}>
+        <motion.p className="description-text" variants={textVariant(0.6)}>
           {paragraph}
         </motion.p>
       )}

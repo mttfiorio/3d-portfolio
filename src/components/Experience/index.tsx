@@ -2,14 +2,14 @@ import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 
 import "react-vertical-timeline-component/style.min.css";
-import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import ExperienceCard from "./ExperienceCard";
 import SectionText from "../SectionText";
+import Section from "../Section";
 
 const Experience = () => {
   return (
-    <div className="mx-4 md:mx-12">
+    <Section id="experience">
       <SectionText
         overTitle={content.experience.overTitle}
         title={content.experience.title}
@@ -22,8 +22,8 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </div>
+    </Section>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

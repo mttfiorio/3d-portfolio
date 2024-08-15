@@ -1,13 +1,13 @@
 import React, { lazy, Suspense } from "react";
-import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import SectionText from "../SectionText";
+import Section from "../Section";
 
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
 const Projects = () => {
   return (
-    <div className="mx-4 md:mx-12">
+    <Section id="projects">
       <SectionText
         overTitle={content.works.overTitle}
         title={content.works.title}
@@ -21,18 +21,13 @@ const Projects = () => {
       xl:justify-between"
       >
         {content.works.projects.map((project, index) => (
-          <Suspense
-            key={`project-${index}`}
-            fallback={
-              <div className="bg-dark p-5 rounded-2xl sm:w-[360px] w-full h-[350px] animate-pulse" />
-            }
-          >
+          <Suspense key={project.id}>
             <ProjectCard index={index} {...project} />
           </Suspense>
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+export default Projects;

@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import {
   IcoArrowUpRightFromSquare,
@@ -7,6 +6,7 @@ import {
   IcoLinkedin,
   IcoMail,
 } from "../Icon";
+import Section from "../Section";
 import SectionText from "../SectionText";
 
 const Contact = () => {
@@ -14,7 +14,7 @@ const Contact = () => {
     "bg-light hover:bg-dark hover:text-light border-2 border-solid border-transparent hover:border-dark transition-all duration-300";
 
   return (
-    <div className="mx-4 md:mx-12">
+    <Section id="contact">
       <SectionText
         overTitle={content.contact.overTitle}
         title={content.contact.title}
@@ -67,8 +67,8 @@ const Contact = () => {
           </a>
         )}
       </div>
-    </div>
+    </Section>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

@@ -13,7 +13,7 @@ export default defineConfig({
           three: ["three"],
           threeFiber: ["@react-three/fiber", "@react-three/drei"],
           landingUtils: ["framer-motion"],
-          utils: ["react-vertical-timeline-component", "react-parallax-tilt"],
+          utils: ["react-vertical-timeline-component"],
         },
       },
     },

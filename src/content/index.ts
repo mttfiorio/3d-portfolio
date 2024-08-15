@@ -6,7 +6,7 @@ const content = {
         title: "ABOUT",
       },
       {
-        id: "work",
+        id: "experience",
         title: "WORK",
       },
       {
@@ -155,6 +155,7 @@ const content = {
       "Here's a sneak peek at some projects that put my skills to the test. You'll find a quick rundown of each, along with links to check them out in action. Enjoy the tour!",
     projects: [
       {
+        id: "change",
         name: "Change Lingerie",
         description:
           "Feast your eyes on this sizzling e-commerce website for lingerie. I worked my magic on both the frontend and backend, with a special focus on making payments as smooth as silk.",
@@ -177,6 +178,7 @@ const content = {
         link: "https://www.change.com/dk",
       },
       {
+        id: "dilling",
         name: "Dilling",
         description:
           "Check out this cozy e-commerce site that is warming hearts in multiple countries. I've had my hands in both the frontend and backend cookie jars, this time with a sprinkle of .NET",
@@ -195,6 +197,7 @@ const content = {
         link: "https://dk.dilling.com/",
       },
       {
+        id: "mercell",
         name: "Mercell",
         description:
           "Take a gander at this sleek fully headless info website. The deadline was tighter than a drum, but hey, who doesn't love a good challenge?",
