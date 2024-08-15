@@ -1,6 +1,6 @@
-import React, { useRef, ReactNode } from "react";
-import { motion } from "framer-motion";
+import React, { useContext } from "react";
 import Card from "../Card";
+import { ModalContext } from "../Modal/ModalContext";
 
 interface Tag {
   name: string;
@@ -17,36 +17,6 @@ interface ProjectCardProps {
   link: string;
 }
 
-interface VideoWrapper {
-  videoSrc: string;
-  children?: ReactNode;
-}
-
-const VideoWrapper = ({ videoSrc }: VideoWrapper) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }} // Initial state of opacity
-      whileHover={{ opacity: 1 }} // State of opacity while hovering
-      className="absolute top-0 left-0 w-full h-full z-10"
-      onHoverStart={() => videoRef.current?.play()}
-      onHoverEnd={() => videoRef.current?.pause()}
-    >
-      <div className="absolute top-0 left-0 w-full h-full bg-dark/10 rounded-2xl" />
-      <video
-        muted
-        loop
-        ref={videoRef}
-        className="w-full h-full object-cover rounded-2xl"
-      >
-        <source src={"projects/" + videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </motion.div>
-  );
-};
-
 const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
   name,
@@ -56,9 +26,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   video,
 }) => {
+  const context = useContext(ModalContext);
+
+  if (!context) {
+    throw new Error("Modal must be used within a ModalProvider");
+  }
+
+  const { isModalOpen, setIsModalOpen } = context;
+
   return (
-    <Card index={index} className="w-full min-h-[450px]">
-      <a href={link} aria-label={name + "-link"} className="h-full w-full">
+    <Card index={index} animate={true} className="w-full min-h-[450px]">
+      <button className="h-full w-full" onClick={() => setIsModalOpen(true)}>
         <div
           className="relative w-full h-full z-10 
         bg-dark/90 
@@ -86,9 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="absolute top-0 left-0 z-0
           w-full h-full object-cover rounded-2xl"
         />
-
-        <VideoWrapper videoSrc={video} />
-      </a>
+      </button>
     </Card>
   );
 };
