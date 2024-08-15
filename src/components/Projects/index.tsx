@@ -1,27 +1,18 @@
 import React, { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
-import { fadeIn, textVariant } from "../../utils/motion";
 import content from "../../content";
+import SectionText from "../SectionText";
 
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
 const Projects = () => {
   return (
     <div className="mx-4 md:mx-12">
-      <motion.div variants={textVariant(0)}>
-        <p className="over-text">{content.works.overTitle}</p>
-        <h2>{content.works.title}</h2>
-      </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="description-text "
-        >
-          {content.works.paragraph}
-        </motion.p>
-      </div>
+      <SectionText
+        overTitle={content.works.overTitle}
+        title={content.works.title}
+        paragraph={content.works.paragraph}
+      />
 
       <div
         className="mt-6 md:mt-12 

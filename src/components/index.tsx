@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Tech from "./Tech";
+import SectionText from "./SectionText";
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   Projects,
   Contact,
   Tech,
+  SectionText,
 };

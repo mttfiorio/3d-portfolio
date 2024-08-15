@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import content from "../../content";
 import {
@@ -9,21 +7,19 @@ import {
   IcoLinkedin,
   IcoMail,
 } from "../Icon";
+import SectionText from "../SectionText";
 
 const Contact = () => {
   const iconsStyles =
-    "bg-light hover:bg-dark hover:text-light border-2 border-solid border-transparent hover:border-dark";
+    "bg-light hover:bg-dark hover:text-light border-2 border-solid border-transparent hover:border-dark transition-all duration-300";
 
   return (
     <div className="mx-4 md:mx-12">
-      <motion.div variants={textVariant(0)}>
-        <p className="over-text">{content.contact.overTitle}</p>
-        <h2>{content.contact.title}</h2>
-      </motion.div>
-
-      <motion.p className="description-text" variants={fadeIn("", "", 0.1, 1)}>
-        {content.contact.paragraph}
-      </motion.p>
+      <SectionText
+        overTitle={content.contact.overTitle}
+        title={content.contact.title}
+        paragraph={content.contact.paragraph}
+      />
 
       <div
         className="mt-6 md:mt-12 
@@ -36,7 +32,7 @@ const Contact = () => {
             target={"_blank"}
             className="flex items-center gap-2 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
               hover:bg-light hover:text-dark 
-              border-2 border-solid border-light hover:border-dark"
+              border-2 border-solid border-light hover:border-dark transition-all duration-300"
             download={true}
             aria-label="Resume"
           >
@@ -71,21 +67,6 @@ const Contact = () => {
           </a>
         )}
       </div>
-
-      {/*
- <div className="w-full h-[360px] hidden">
-        {
-          <Suspense
-            fallback={
-              <div className="bg-dark p-5 rounded-2xl sm:w-[360px] w-full h-[350px] animate-pulse" />
-            }
-          >
-            <ComputerCanvas />
-          </Suspense>
-        }
-      </div>
-
-*/}
     </div>
   );
 };
