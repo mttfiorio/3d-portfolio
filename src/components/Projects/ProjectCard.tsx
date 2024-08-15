@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Card from "../Card";
 import { ModalContext } from "../Modal/ModalContext";
 
@@ -27,6 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   video,
 }) => {
   const context = useContext(ModalContext);
+  const [isHovered, setIsHovered] = useState(false);
 
   if (!context) {
     throw new Error("Modal must be used within a ModalProvider");
@@ -35,7 +36,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const { isModalOpen, setIsModalOpen } = context;
 
   return (
-    <Card index={index} animate={true} className="w-full min-h-[450px]">
+    <Card
+      index={index}
+      isHovered={isHovered}
+      setIsHovered={setIsHovered}
+      className="w-full min-h-[450px]"
+    >
       <button className="h-full w-full" onClick={() => setIsModalOpen(true)}>
         <div
           className="relative w-full h-full z-10 
@@ -58,12 +64,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </div>
 
-        <img
-          src={"projects/" + image}
-          alt={name}
-          className="absolute top-0 left-0 z-0
-          w-full h-full object-cover rounded-2xl"
-        />
+        <div
+          className={`absolute top-0 left-0 z-0 w-full h-full rounded-2xl overflow-hidden`}
+        >
+          <img
+            src={"projects/" + image}
+            alt={name}
+            className={`w-full h-full object-cover ${
+              isHovered
+                ? "transform transition-transform duration-300 scale-125"
+                : ""
+            }`}
+          />
+        </div>
       </button>
     </Card>
   );
