@@ -52,23 +52,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   video,
 }) => {
   return (
-    <Card index={index}>
+    <Card index={index} className="w-full min-h-[450px]">
       <a href={link} aria-label={name + "-link"} className="h-full w-full">
         <div
           className="relative w-full h-full z-10 
         bg-dark/90 
-        p-6 rounded-2xl"
+        p-12 md:p-6 rounded-2xl
+        flex flex-col justify-center"
         >
           <h3 className="text-white">{name}</h3>
           <p className="text-white">{description}</p>
-          <div className="mt-4 flex flex-wrap justify-end gap-2">
-            {tags.map((tag) => (
-              <p key={`${name}-${tag.name}`} className={`${tag.color}`}>
-                #{tag.name}
-              </p>
-            ))}
-          </div>
         </div>
+
+        <div
+          className="absolute bottom-0 right-0 z-10
+         m-4 flex flex-wrap justify-end gap-2"
+        >
+          {tags.map((tag) => (
+            <p key={`${name}-${tag.name}`} className={`${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
+
         <img
           src={"projects/" + image}
           alt={name}

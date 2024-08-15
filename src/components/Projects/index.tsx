@@ -16,9 +16,7 @@ const Projects = () => {
 
       <div
         className="mt-6 md:mt-12 
-      flex items-start flex-wrap 
-      gap-12
-      xl:justify-between"
+      grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8"
       >
         {content.works.projects.map((project, index) => (
           <Suspense key={project.id}>

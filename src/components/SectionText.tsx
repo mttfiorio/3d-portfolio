@@ -24,9 +24,9 @@ const SectionText = ({ overTitle, title, paragraph }: SectionTextProps) => {
       <motion.p variants={textVariant(0)} className="over-text">
         {overTitle}
       </motion.p>
-      <motion.h2 variants={textVariant(0.3)}>{title}</motion.h2>
+      <motion.h2 variants={textVariant(0.2)}>{title}</motion.h2>
       {paragraph && (
-        <motion.p className="description-text" variants={textVariant(0.6)}>
+        <motion.p className="description-text" variants={textVariant(0.4)}>
           {paragraph}
         </motion.p>
       )}

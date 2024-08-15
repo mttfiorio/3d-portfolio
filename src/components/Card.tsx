@@ -15,15 +15,15 @@ const fadeIn = (delay: number): Variants => ({
   show: {
     x: 0,
     opacity: 1,
-    transition: { type: "just", delay, duration: 1, ease: "easeOut" },
+    transition: { type: "just", delay, duration: 0.5, ease: "easeOut" },
   },
 });
 
 const Card = ({ className, children, index }: CardProps) => {
   return (
     <motion.div
-      variants={fadeIn(index * 0.5 + 1)}
-      className={`relative w-full  ${className}`}
+      variants={fadeIn(index * 0.25 + 0.5)}
+      className={`relative ${className}`}
     >
       <div
         className="absolute w-full h-full left-1 top-1 -z-10
@@ -31,7 +31,7 @@ const Card = ({ className, children, index }: CardProps) => {
       />
 
       <div
-        className="relative w-full h-full left-0 top-0 
+        className="absolute w-full h-full 
         diagonal-cut"
       >
         {children}
