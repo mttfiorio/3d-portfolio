@@ -8,8 +8,8 @@ type ServiceCardProps = {
 };
 
 const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
-  <Card index={index}>
-    <div className="flex flex-col items-center justify-center bg-dark rounded-2xl p-8">
+  <Card index={index} className="w-full min-h-[250px]">
+    <div className="w-full flex flex-col items-center justify-center bg-dark rounded-2xl p-8">
       <img
         src={"about/" + icon}
         loading="lazy"

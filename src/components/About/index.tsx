@@ -16,8 +16,7 @@ const About = () => {
 
       <div
         className="mt-6 md:mt-12 
-      flex items-start flex-wrap 
-      gap-12 xl:justify-between"
+      grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {content.about.services.map((service, index) => (
           <Suspense

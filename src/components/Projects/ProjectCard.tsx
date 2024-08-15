@@ -33,8 +33,13 @@ const VideoWrapper = ({ videoSrc }: VideoWrapper) => {
       onHoverStart={() => videoRef.current?.play()}
       onHoverEnd={() => videoRef.current?.pause()}
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-dark/10" />
-      <video muted loop ref={videoRef} className="w-full h-full object-cover">
+      <div className="absolute top-0 left-0 w-full h-full bg-dark/10 rounded-2xl" />
+      <video
+        muted
+        loop
+        ref={videoRef}
+        className="w-full h-full object-cover rounded-2xl"
+      >
         <source src={"projects/" + videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

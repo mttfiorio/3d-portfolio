@@ -1,23 +1,12 @@
 import React, { ReactNode } from "react";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils";
 
 interface CardProps {
   index: number;
   children: ReactNode;
   className?: string;
 }
-
-const fadeIn = (delay: number): Variants => ({
-  hidden: {
-    x: -50,
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: { type: "just", delay, duration: 0.5, ease: "easeOut" },
-  },
-});
 
 const Card = ({ className, children, index }: CardProps) => {
   return (

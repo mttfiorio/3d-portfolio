@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils";
 
 interface SectionTextProps {
   overTitle: string;
@@ -7,26 +8,15 @@ interface SectionTextProps {
   paragraph?: string;
 }
 
-const textVariant = (delay: number): Variants => ({
-  hidden: { x: -50, opacity: 0 },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: { type: "just", duration: 0.5, delay },
-  },
-});
-
-const once = true;
-
 const SectionText = ({ overTitle, title, paragraph }: SectionTextProps) => {
   return (
     <>
-      <motion.p variants={textVariant(0)} className="over-text">
+      <motion.p variants={fadeIn(0)} className="over-text">
         {overTitle}
       </motion.p>
-      <motion.h2 variants={textVariant(0.2)}>{title}</motion.h2>
+      <motion.h2 variants={fadeIn(0.2)}>{title}</motion.h2>
       {paragraph && (
-        <motion.p className="description-text" variants={textVariant(0.4)}>
+        <motion.p className="description-text" variants={fadeIn(0.4)}>
           {paragraph}
         </motion.p>
       )}
